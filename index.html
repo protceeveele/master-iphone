@@ -6,21 +6,27 @@
 <meta name="theme-color" content="#05080a">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="MASTER">
+<meta name="apple-mobile-web-app-title" content="FROZE-NEX">
 <link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon.svg">
 <link rel="stylesheet" href="styles.css">
-<title>MASTER</title>
+<title>FROZE-NEX</title>
 </head>
 <body>
 <main class="screen">
 <div class="scanlines"></div>
 <pre id="boot" class="boot"></pre>
-<section id="titleStage" class="title-stage hidden"><div id="masterTitle" class="master-title">MASTER</div></section>
+<section id="titleStage" class="title-stage hidden"><div id="masterTitle" class="master-title">FROZE-NEX</div></section>
 <section id="shell" class="shell hidden">
 <div class="shell-head"><span>TERMINAL</span><span>MAIN SHELL</span></div>
 <div id="greeting" class="greeting">Welcome back, Benve</div>
 </section>
-<button id="startBtn" class="start-button">TAP TO ENABLE AUDIO</button>
+<section id="tapGate" class="tap-gate">
+  <div class="tap-box">
+    <div class="tap-label">INITIALIZE</div>
+    <div class="tap-sub">TAP ANYWHERE</div>
+  </div>
+</section>
 </main>
 <script src="app.js"></script>
 </body>
