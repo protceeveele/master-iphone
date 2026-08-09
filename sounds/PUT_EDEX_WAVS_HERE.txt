@@ -1,0 +1,9 @@
+Copia qui:
+stdout.wav
+granted.wav
+theme.wav
+expand.wav
+keyboard.wav
+
+Usa i WAV PCM che hai già in:
+C:\Users\benve\Desktop\edex_extracted\assets\audio\master_pcm
