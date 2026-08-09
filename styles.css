@@ -1,0 +1,17 @@
+:root{--bg:#05080a;--main:#9fd2d8;--dim:#48646a;--grid:#102126}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:var(--bg);color:var(--main);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;overflow:hidden}
+body{min-height:100svh;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+.screen{position:relative;width:100%;height:100svh;background:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px),var(--bg);background-size:28px 28px;overflow:hidden}
+.scanlines{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(to bottom,rgba(255,255,255,.012) 0 1px,transparent 2px 4px)}
+.boot{position:absolute;inset:14px 14px auto 14px;margin:0;max-height:calc(100svh - 28px);overflow:hidden;white-space:pre-wrap;line-height:1.18;font-size:clamp(9px,2.4vw,12px)}
+.hidden{display:none!important}
+.title-stage{position:absolute;inset:0;display:grid;place-items:center}
+.master-title{position:relative;padding:.18em .45em;font-size:clamp(54px,18vw,110px);font-weight:800;letter-spacing:.08em;color:var(--main);border:5px solid var(--main)}
+.master-title.glitch::before,.master-title.glitch::after{content:"MASTER";position:absolute;inset:0;padding:.18em .45em;border:5px solid transparent}
+.master-title.glitch::before{transform:translate(-5px,1px);color:#d7fbff;clip-path:inset(12% 0 58% 0)}
+.master-title.glitch::after{transform:translate(6px,-1px);color:var(--dim);clip-path:inset(64% 0 9% 0)}
+.shell{position:absolute;left:50%;top:50%;width:min(86vw,760px);height:0;transform:translate(-50%,-50%);border:1px solid var(--main);transition:height .5s linear}
+.shell.open{height:22vh}.shell-head{position:absolute;top:10px;left:14px;right:14px;display:flex;justify-content:space-between;font-size:10px;color:var(--dim)}
+.greeting{position:absolute;inset:0;display:grid;place-items:center;font-size:clamp(20px,5.5vw,30px);opacity:0;transition:opacity .18s linear}.greeting.visible{opacity:1}
+.start-button{position:absolute;left:50%;bottom:10vh;transform:translateX(-50%);background:transparent;color:var(--main);border:1px solid var(--main);padding:12px 18px;font:inherit;letter-spacing:.08em}
+.fade-out{animation:fadeout .55s linear forwards}@keyframes fadeout{to{opacity:0}}
